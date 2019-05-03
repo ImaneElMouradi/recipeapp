@@ -26,9 +26,10 @@ class Main extends Component {
 
   componentDidMount() {
     const json = localStorage.getItem("recipes");
+
     const recipes = JSON.parse(json);
 
-    this.setState({ recipes });
+    if (recipes) this.setState({ recipes });
   }
 
   componentDidUpdate() {

@@ -32,8 +32,8 @@ class Recipe extends Component {
     if (this.state.isLoading)
       return (
         <div className="d-flex justify-content-center mt-5">
-          <div class="spinner-border text-danger" role="status">
-            <span class="sr-only">Loading...</span>
+          <div className="spinner-border text-danger" role="status">
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
       );
