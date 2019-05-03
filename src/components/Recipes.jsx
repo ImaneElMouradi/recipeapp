@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 const Recipes = props => {
   return (
     <div className="container">
@@ -18,7 +20,7 @@ const Recipes = props => {
                   alt={recipe.title}
                 />
 
-                <div className="recipes__text">
+                <div className="recipe__text">
                   <h5 className="recipes__title">
                     {recipe.title.length < 20
                       ? `${recipe.title}`
@@ -28,7 +30,14 @@ const Recipes = props => {
                     Publisher: <span>{recipe.publisher}</span>
                   </p>
                 </div>
-                <button className="recipe_buttons">view recipe</button>
+                <Link
+                  to={{
+                    pathname: `/recipe/${recipe.recipe_id}`,
+                    state: { recipe: recipe.title }
+                  }}
+                >
+                  <button className="form__button">view recipe</button>
+                </Link>
               </div>
             </div>
           );

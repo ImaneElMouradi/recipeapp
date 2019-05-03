@@ -54,7 +54,7 @@ button:focus {
 }
 
 .recipe__text {
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 .recipes__title {
@@ -93,11 +93,20 @@ button:focus {
   background: transparent;
   padding: 0.2rem 0.9rem;
   margin: 0 0.2rem;
-  border-radius: 1px;
+  border-radius: 5px;
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 500;
   margin-left: 0.7rem;
+}
+
+.form__button:hover {
+  color: white;
+  background-color: #e74c3c;
+}
+
+.form__button:focus {
+  outline: none;
 }
 
 input[type="text"] {
@@ -153,10 +162,19 @@ input:-webkit-autofill {
   background: transparent;
   padding: 0.2rem 0.9rem;
   margin: 0 0.2rem;
-  border-radius: 1px;
+  border-radius: 5px;
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.active-recipe__button:hover {
+  color: white;
+  background-color: #e74c3c;
+}
+
+.active-recipe__button:focus {
+  outline: none;
 }
 
 .text-capitalize {
