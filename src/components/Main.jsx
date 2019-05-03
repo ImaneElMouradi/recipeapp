@@ -25,7 +25,7 @@ class Main extends Component {
   };
 
   componentDidMount() {
-    const json = localStorage.getItem("recipes");
+    const json = sessionStorage.getItem("recipes");
 
     const recipes = JSON.parse(json);
 
@@ -34,7 +34,7 @@ class Main extends Component {
 
   componentDidUpdate() {
     const recipes = JSON.stringify(this.state.recipes);
-    localStorage.setItem("recipes", recipes);
+    sessionStorage.setItem("recipes", recipes);
   }
 
   render() {
