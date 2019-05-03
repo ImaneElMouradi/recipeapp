@@ -6,7 +6,8 @@ const API_KEY = "1dcbf73b1f90d1c40167264485eede61";
 
 class Recipe extends Component {
   state = {
-    activeRecipe: []
+    activeRecipe: [],
+    isLoading: true
   };
 
   async componentDidMount() {
@@ -17,7 +18,7 @@ class Recipe extends Component {
 
     const res = await req.json();
     // console.log(res.recipes[0]);
-    this.setState({ activeRecipe: res.recipes[0] });
+    this.setState({ activeRecipe: res.recipes[0], isLoading: false });
   }
 
   render() {
@@ -27,6 +28,16 @@ class Recipe extends Component {
       publisher,
       publisher_url
     } = this.state.activeRecipe;
+
+    if (this.state.isLoading)
+      return (
+        <div className="d-flex justify-content-center mt-5">
+          <div class="spinner-border text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      );
+
     return (
       <div className="container">
         {this.state.activeRecipe.length !== 0 && (
