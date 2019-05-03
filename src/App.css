@@ -1,5 +1,5 @@
 body {
-  background:#f3f3f3;
+  background: #f3f3f3;
 }
 
 img {
@@ -29,6 +29,7 @@ button:focus {
 
 .App-title {
   font-size: 1.5em;
+  text-transform: capitalize;
 }
 
 .recipe_buttons {
@@ -47,7 +48,7 @@ button:focus {
   background: #fff;
   padding-bottom: 2rem;
   border-radius: 5px;
-  box-shadow: -1px 2px 34px -13px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 34px -13px rgba(0, 0, 0, 0.75);
   text-align: left;
   overflow: hidden;
 }
@@ -99,7 +100,7 @@ button:focus {
   margin-left: 0.7rem;
 }
 
-input[type="text"] { 
+input[type="text"] {
   outline: none;
 }
 
@@ -125,7 +126,8 @@ input:-webkit-autofill {
   margin: 1rem 0;
 }
 
-.active-recipe__publisher, .active-recipe__website {
+.active-recipe__publisher,
+.active-recipe__website {
   text-transform: uppercase;
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -155,4 +157,12 @@ input:-webkit-autofill {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
